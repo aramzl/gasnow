@@ -38,7 +38,7 @@ async function createWidget() {
     const paperText = column.addText("GAS PRICE")
     paperText.font = Font.mediumRoundedSystemFont(13)
 
-    let computedGas = Math.trunc(parseInt(gasInfo.data.med) / 1_000_000_000)
+    let computedGas = Math.trunc(parseInt(gasInfo.data.min) / 1_000_000_000)
     const gas = column.addText(computedGas.toString())
     gas.font = Font.mediumRoundedSystemFont(22)
     if (computedGas > 30) {
